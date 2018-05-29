@@ -4,8 +4,8 @@
       <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
 
       <ul>
-      <% room.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% room.errors.full_threads.each do |thread| %>
+        <li><%= thread %></li>
       <% end %>
       </ul>
     </div>
@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :messages %>
-    <%= form.number_field :messages, id: :room_messages %>
+    <%= form.label :threads %>
+    <%= form.number_field :threads, id: :room_threads %>
   </div>
 
   <div class="actions">

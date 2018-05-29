@@ -10,6 +10,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1
   # GET /rooms/1.json
   def show
+    @messages = @room.messages.order("created_at DESC")
   end
 
   # GET /rooms/new
@@ -69,6 +70,6 @@ class RoomsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def room_params
-      params.require(:room).permit(:name, :messages)
+      params.require(:room).permit(:name, :threads)
     end
 end

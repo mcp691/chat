@@ -2,7 +2,7 @@ class CreateRooms < ActiveRecord::Migration[5.1]
   def change
     create_table :rooms do |t|
       t.string :name
-      t.integer :messages
+      t.integer :threads
 
       t.timestamps
     end
