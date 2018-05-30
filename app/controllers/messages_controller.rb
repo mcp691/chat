@@ -48,6 +48,8 @@ class MessagesController < ApplicationController
   # DELETE /messages/1
   # DELETE /messages/1.json
   def destroy
+    @message = Message.find(params[:id])
+    room = @message.room
     @message.destroy
     respond_to do |format|
       format.html { redirect_to rooms_url, notice: 'Message was successfully destroyed.' }
