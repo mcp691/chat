@@ -3,11 +3,6 @@
     <div id="error_explanation">
       <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
 
-      <ul>
-      <% room.errors.full_threads.each do |thread| %>
-        <li><%= thread %></li>
-      <% end %>
-      </ul>
     </div>
   <% end %>
 
