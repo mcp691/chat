@@ -10,4 +10,12 @@ describe RoomsController, type: :controller do
     end
   end
 
+  context 'GET #new' do
+    it 'renders room form' do
+      get :new
+      expect(response).to be_ok
+      expect(response).to render_template('new')
+    end
+  end
+
 end
