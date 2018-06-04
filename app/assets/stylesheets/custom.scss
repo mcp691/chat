@@ -7,6 +7,13 @@ body {
   line-height: 18px;
 }
 
+.nav-link {
+    &:hover {
+      background-color: blue;
+      color:white;
+    }
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
