@@ -1,11 +1,10 @@
 <% if signed_in? %>
   <%= form_for([@room, @room.messages.build]) do |f| %>
     <p>
-      <%= f.label :content, "Message" %>
-      <%= f.text_area :content %>
+      <%= f.text_area :content, class: "form-control", rows: 1, placeholder: "Message" %>
     </p>
     <p>
-      <%= f.submit "Submit" %>
+      <%= f.submit "Send", class: "btn btn-primary" %>
     </p>
   <% end %>
 <% end %>
