@@ -1,3 +1,7 @@
+* {
+  padding: 0px;
+}
+
 body {
   background-color: #fff;
   color: #333;
@@ -16,7 +20,7 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 18px;
 }
 
@@ -90,8 +94,40 @@ label {
   display: block;
 }
 
+.del-msg {
+  float: right;
+}
+
+.msg-input {
+  position: fixed;
+  bottom:0;
+  width: 97%;
+}
+
+.msg-cont:hover {
+  background-color: #f7f7f7;
+}
+
 .msg-box {
-  margin: 2% 5% 0 5%;
-  padding: 3%;
-  border: solid 1px gray;
+  width: 100%;
+  height:78%;
+  position: absolute;
+  padding: 2%;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    .msg-box {
+        height:73%;
+    }
+}
+
+.messages {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
 }
