@@ -3,7 +3,7 @@
   <span class="msg-input">
 
     <div class="input-group mb-3">
-      <%= f.text_field :content, class: "form-control", rows: 1, placeholder: "Message", aria_label:"Message", aria_describedby: "basic-addon2" %>
+      <%= f.text_field :content, class: "form-control", rows: 1, placeholder: "Message", aria_label:"Message", aria_describedby: "basic-addon2", autofocus: "autofocus", autocomplete: "off" %>
       <div class="input-group-append">
         <%= f.submit "Send", class: "btn btn-primary" %>
       </div>
