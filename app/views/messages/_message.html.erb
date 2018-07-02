@@ -1,7 +1,7 @@
 <div class="msg-cont">
   <p>
     <strong>
-      <%= link_to message.user.first_name, user_path %>
+      <%= message.user.first_name %>
     </strong>
     <% if current_user %>
     <%= link_to 'Delete', room_message_path(message.room, message), method: :delete, data: { confirm: 'Are you sure?' }, class: "del-msg" %>

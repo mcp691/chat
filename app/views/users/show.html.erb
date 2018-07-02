@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
+<div class="profile" align="center">
+  <% if @user.image.attached? %>
+  <%= image_tag @user.image, class: "profile-pic" %>
+  <% else %>
+  <%= image_tag("fa-user.png", :alt => "default profile picture") %>
+  <% end %>
+  <h1>
+    <%= @user.first_name %>
+    <%= @user.last_name %>
+  </h1>
+</div>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

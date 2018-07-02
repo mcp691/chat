@@ -135,3 +135,9 @@ label {
 .messages::-webkit-scrollbar {
     display: none;
 }
+
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  overflow:hidden;
+}
