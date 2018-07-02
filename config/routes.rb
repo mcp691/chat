@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
-  resources :rooms do
-    resources :messages
-  end
   resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :rooms do
+    resources :messages do
+      resources :users
+    end
+  end
 
   root 'static_pages#home'
 
