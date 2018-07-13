@@ -1,5 +1,5 @@
 <% if signed_in? %>
-  <%= form_for([@room, @room.messages.build]) do |f| %>
+  <%= form_for([@room, @room.messages.build], remote: true) do |f| %>
   <span class="msg-input">
 
     <div class="input-group mb-3">

@@ -26,6 +26,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.app_generators.javascript_engine = :javascript
+
   # Store files locally.
   config.active_storage.service = :local
 

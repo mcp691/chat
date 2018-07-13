@@ -1,3 +1,5 @@
 <div class="messages">
-<%= render @messages %>
+  <% @messages.each do |message| %>
+    <%= render message %>
+  <% end %>
 </div>
